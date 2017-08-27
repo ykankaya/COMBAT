@@ -5,7 +5,7 @@ using System;
 /// they are materialized into the game world.
 [Serializable]
 public class ItemAttribute {
-	[InspectorHide] public Item parent;
+	[InspectorHide] public Item item;
 
 }	
 
