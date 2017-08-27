@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using System.Collections.Generic;
 
 [CustomPropertyDrawer(typeof(ItemAttributeList))]
 public class ItemAttributeListDrawer : PropertyDrawer {
@@ -11,7 +12,7 @@ public class ItemAttributeListDrawer : PropertyDrawer {
 
 
 		// EditorGUIUtility.LookLikeControls();
-		ItemAttributeList.ParentList<ItemAttribute> list = (ItemAttributeList.ParentList<ItemAttribute>) ((ItemAttributeList) fieldInfo.GetValue(property.serializedObject.targetObject)).list;
+		List<ItemAttribute> list = ((ItemAttributeList) fieldInfo.GetValue(property.serializedObject.targetObject)).list;
 
 
 		float lineHeight = position.height + 2f;
